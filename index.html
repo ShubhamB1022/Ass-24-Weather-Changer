@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment no -28</title>
+    <style>
+        body{
+            background-color: rgb(61, 58, 58);
+        }
+        .container{
+            border: 1px solid black;
+            width: 400px;
+            height: 300px;
+            display: block;
+            margin: 150px auto;
+            background-color: grey;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .heading{
+            display: block;
+            text-align: center;
+            color: aliceblue;
+        }
+        .seasonimg{
+            display: block;
+            margin: 5px auto;
+            
+        }
+        .btn-container{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 15px;
+        }
+        .weatherbtn{
+            margin-top: 30px;
+            padding: 8px;
+            width: 80px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .summerbtn{
+            background-color: rgb(209, 93, 51);
+        }
+        .winterbtn{
+            background-color: rgb(111, 186, 211);
+        }
+        .mansoonbtn{
+            background-color: cadetblue;
+        }
+
+    </style>
+</head>
+<body id="body">
+    <div class="container" id="container">
+        <h1 class="heading" id="heading">Weather Toggler</h1>
+        <img class="seasonimg" src="./img/season.png" alt="season" id="season">
+        <div class="btn-container">
+        <button class="weatherbtn summerbtn" onclick="summer()">Summer</button>
+        <button class="weatherbtn winterbtn" onclick="winter()">Winter</button>
+        <button class="weatherbtn mansoonbtn" onclick="mansoon()">Mansoon</button>
+        
+        </div>
+    </div>
+    <script>
+        function summer(){
+            const weatherImgElement = document.getElementById('season');
+            weatherImgElement.src= './img/summer.png';
+
+            const bodyElement = document.getElementById('body');
+            bodyElement.style.backgroundColor = '#ffa366';
+
+            const containerElement = document.getElementById('container');
+            containerElement.style.backgroundColor = '#ff8533';
+
+            const headingElement = document.getElementById('heading');
+            headingElement.style.color = '#000';
+        }
+        function winter(){
+            const weatherImgElement = document.getElementById('season');
+            weatherImgElement.src = './img/winter.png';
+
+            const bodyElement = document.getElementById('body');
+            bodyElement.style.backgroundColor = '#99ccff';
+
+            const containerElement = document.getElementById('container');
+            containerElement.style.backgroundColor = '#80bfff';
+
+            const headingElement = document.getElementById('heading');
+            headingElement.style.color = '#000';
+        }
+        function mansoon(){
+            const weatherImgElement = document.getElementById('season');
+            weatherImgElement.src = './img/mansoon.png';
+
+            const bodyElement = document.getElementById('body');
+            bodyElement.style.backgroundColor = '#a3a3c2';
+
+            const containerElement = document.getElementById('container');
+            containerElement.style.backgroundColor = '#9494b8';
+
+            const headingElement = document.getElementById('heading');
+            headingElement.style.color = '#000';
+        }
+    </script>
+</body>
+</html>
